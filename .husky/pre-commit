@@ -1,0 +1,40 @@
+#!/bin/sh
+
+# ANSI color codes for  formating
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+NC='\033[0m' # No Color
+
+# Run linting and lint-staged checks
+echo "🔍 Running lint checks..."
+npx lint-staged
+
+# Check the exit status of the previous command (lint-staged)
+if [ $? -ne 0 ]; then
+    echo "${RED}❌ Linting failed. Aborting commit.${NC}"
+    exit 1
+fi
+
+
+# # Run Jest tests
+# echo "🧪 Running unit tests..."
+# npm run test
+
+# # Check the exit status of the previous command
+# if [ $? -ne 0 ]; then
+#     echo "${RED}❌ Unit tests failed. Aborting commit.${NC}"
+#     exit 1
+# fi
+
+# # Run Cypress tests without opening the launchpad
+# echo "🖥️  Running Cypress component tests..."
+# npm run cypress-run-component
+
+# # Check the exit status of the previous command (Cypress tests)
+# if [ $? -ne 0 ]; then
+#   echo "${RED}❌ Cypress tests failed. Aborting commit.${NC}"
+#   exit 1
+# fi
+
+# If everything passed
+echo "${GREEN}✅ All checks passed! Commit successful.${NC}"

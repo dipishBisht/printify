@@ -1,0 +1,19 @@
+#!/bin/sh
+
+# Run commitlint on the commit message file
+npx --no -- commitlint --edit ${1}
+
+# Check if commitlint passed
+if [ $? -ne 0 ]; then
+  echo "❌ Commit message failed validation!"
+  echo ""
+  echo "✅ Expected format: type: short meaningful message"
+  echo "➡️ Valid types: build, cli, test, config, style, refactor, feat, fix, doc, typo"
+  echo "➡️ Example: feat: add user login feature"
+  exit 1
+fi
+
+
+# If it passed
+echo "✅ Commit message looks good!"
+exit 0
