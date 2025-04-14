@@ -1,11 +1,16 @@
 import React from "react";
-import { Inter } from "next/font/google";
+import { Outfit } from "next/font/google"
 import "./globals.css";
+import Footer from "@/components/layout/footer";
+import Navbar from "@/components/layout/navbar";
 
-const inter = Inter({ subsets: ["latin"] })
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+})
 
 export const metadata = {
-  title: "PrintEase",
+  title: "Printify",
   description: "Smart printing for students & shops",
 }
 
@@ -16,14 +21,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className}`}>
-        <nav>Navbar</nav>
+      <body className={`${outfit.className} font-sans`}>
+        <Navbar />
         <main className="min-h-screen flex flex-col">
           {children}
         </main>
-        <footer className="bg-primary text-white text-center py-4">
-          © 2025 PrintEase. All rights reserved.
-        </footer>
+        <Footer />
       </body>
     </html>
   );

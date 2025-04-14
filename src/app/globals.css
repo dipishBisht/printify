@@ -37,10 +37,26 @@
   --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
   --sidebar-border: oklch(0.929 0.013 255.508);
   --sidebar-ring: oklch(0.704 0.04 256.788);
+
+
+  --text-color: #939DB8;
+  --backgroud-color: #0B0C14;
+  --primary-color: #6f41d2;
+  --studio-50: #f4f4fe;
+  --studio-100: #edeafd;
+  --studio-200: #dcd8fc;
+  --studio-300: #c1b9f9;
+  --studio-400: #a392f3;
+  --studio-500: #8565ed;
+  --studio-600: #7445e2;
+  --studio-800: #532aad;
+  --studio-900: #46248e;
+  --studio-950: #2a1560;
 }
 
 body {
-  color: var(--text);
+  color: var(--text-color);
+  background-color: var(--backgroud-color);
 }
 
 @theme inline {
@@ -119,7 +135,21 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Gradient text */
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  background-image: linear-gradient(to right, #fff, rgba(255, 255, 255, 0.8));
 }

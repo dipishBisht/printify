@@ -1,0 +1,45 @@
+export const pricingOptions = [
+  {
+    name: 'Basic',
+    pricePerPage: 2,
+    features: [
+      'Black & white printing',
+      'Standard paper (80gsm)',
+      'Single-sided printing',
+      'PDF, DOCX, TXT formats',
+    ],
+    color: 'bg-blue-500',
+    gradient: 'from-blue-600 to-blue-400',
+    description: 'Perfect for students and basic document printing needs',
+  },
+  {
+    name: 'Standard',
+    pricePerPage: 2.5,
+    features: [
+      'Color printing',
+      'Premium paper (100gsm)',
+      'Double-sided printing option',
+      'All document formats supported',
+      'Stapling and basic binding',
+    ],
+    color: 'bg-purple-500',
+    gradient: 'from-purple-600 to-purple-400',
+    description: 'Ideal for business documents and professional presentations',
+    popular: true,
+  },
+  {
+    name: 'Premium',
+    pricePerPage: 3,
+    features: [
+      'High-quality color printing',
+      'Photo paper options (160-200gsm)',
+      'Double-sided glossy printing',
+      'All document formats supported',
+      'Professional binding options',
+      'Rush printing service',
+    ],
+    color: 'bg-amber-500',
+    gradient: 'from-amber-500 to-orange-400',
+    description: 'For those who demand the highest quality prints',
+  },
+];
