@@ -9,8 +9,8 @@ export default function Partners() {
             <Container>
                 <div className="flex flex-col gap-2">
                     <Animate delay={300} className="flex flex-col items-center gap-2">
-                        <SubHeading>Be Our Partners</SubHeading>
-                        <Heading color="light" level={2}>Our Partners</Heading>
+                        <SubHeading color="dark">Be Our Partners</SubHeading>
+                        <Heading color="dark" level={2}>Our Partners</Heading>
                     </Animate>
                     <p>Logos or names of nearby verified print shops</p>
                     <p>“Want to partner with us? → Join Now”</p>
