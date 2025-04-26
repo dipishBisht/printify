@@ -11,10 +11,10 @@ export default function WhyChooseUs() {
             <Container>
                 <div className="flex flex-col gap-2 items-center">
                     <Animate delay={300} className="flex flex-col items-center gap-2">
-                        <SubHeading icon={<Crown className="h-5 w-5 text-purple-400" />}>Advantages</SubHeading>
-                        <Heading color="light" level={2}>Why Choose Printify</Heading>
+                        <SubHeading color="dark" icon={<Crown className="h-5 w-5 text-purple-400" />}>Advantages</SubHeading>
+                        <Heading color="dark" level={2}>Why Choose Printify</Heading>
                     </Animate>
-                    <Paragraph color="light" size="normal">
+                    <Paragraph color="dark" size="normal">
                         We offer a range of benefits that make document printing easier than ever before
                     </Paragraph>
                 </div>

@@ -38,11 +38,18 @@ type SubHeadingProps = {
   children: React.ReactNode;
   className?: string;
   icon?: React.ReactNode;
+  color: 'light' | 'dark';
 }
 
-export function SubHeading({ children, className, icon }: SubHeadingProps) {
+export function SubHeading({ children, className, icon, color }: SubHeadingProps) {
+
+  const colorStyles = {
+    light: 'dark:bg-black/5 dark:hover:bg-black/10 dark:border-black/10 dark:text-black/80 bg-gray/5 hover:bg-gray/10 border-gray/10 text-gray/80',
+    dark: 'bg-black/5 hover:bg-black/10 border-black/10 text-black/80 dark:bg-gray/5 dark:hover:bg-gray/10 dark:border-gray/10 dark:text-gray/80',
+  };
+
   return (
-    <div className={cn("inline-flex items-center gap-2 bg-white/5 hover:bg-white/10 backdrop-blur-xl border border-white/10 rounded-full py-2 px-4 text-white/80 text-sm animate-fade-in-up", className)}>
+    <div className={cn(colorStyles[color], "inline-flex items-center gap-2 backdrop-blur-xl border rounded-full py-2 px-4 text-sm animate-fade-in-up", className)}>
       {icon && <span>{icon}</span>}
       <span>{children}</span>
     </div>

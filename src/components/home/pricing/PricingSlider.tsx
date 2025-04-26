@@ -32,7 +32,7 @@ export default function PricingSlider({ options }: { options: PricingOption[] })
     };
 
     return (
-        <div className="bg-gradient-to-br from-gray-800/50 to-gray-900/50 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden">
+        <div className="bg-gradient-to-br from-white-800/50 to-white-900/50 backdrop-blur-xl rounded-3xl border border-white/10 overflow-hidden">
             <div className="px-8 py-12 md:py-16 md:px-12">
                 {/* Plan Selection */}
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -50,7 +50,7 @@ export default function PricingSlider({ options }: { options: PricingOption[] })
                                 variant={selectedOption === index ? "default" : "outline"}
                                 className={`px-8 py-3 ${selectedOption === index
                                     ? `bg-gradient-to-r ${option.gradient} text-white shadow-lg shadow-${option.color}/20`
-                                    : "bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white"
+                                    : "bg-transparent border-black/20 text-black hover:bg-black/10 hover:text-black"
                                     } rounded-full transition-all duration-300`}
                                 onClick={() => handleOptionChange(index)}
                             >
@@ -67,10 +67,10 @@ export default function PricingSlider({ options }: { options: PricingOption[] })
                             }`}
                     >
                         <div className="mb-8">
-                            <Heading level={3} color="light" className="mb-3">
+                            <Heading level={3} color="dark" className="mb-3">
                                 {options[selectedOption].name} Plan
                             </Heading>
-                            <Paragraph color="light" size="normal" className="text-white/70">
+                            <Paragraph color="dark" size="normal" >
                                 {options[selectedOption].description}
                             </Paragraph>
                         </div>
@@ -90,7 +90,7 @@ export default function PricingSlider({ options }: { options: PricingOption[] })
                                     >
                                         <Check className="h-3 w-3 text-white" />
                                     </div>
-                                    <span className="text-white/80">{feature}</span>
+                                    <span className="text-black/80">{feature}</span>
                                 </li>
                             ))}
                         </ul>
@@ -99,10 +99,10 @@ export default function PricingSlider({ options }: { options: PricingOption[] })
                     {/* Calculator Section */}
                     <div className="bg-white/5 backdrop-blur-lg rounded-2xl p-8 border border-white/10">
                         <div className="text-center mb-8">
-                            <Heading level={3} color="light" className="mb-3">
+                            <Heading level={3} color="dark" className="mb-3">
                                 Calculate Your Cost
                             </Heading>
-                            <Paragraph color="light" size="normal" className="text-white/70">
+                            <Paragraph color="dark" size="normal">
                                 Adjust the slider to see your total price
                             </Paragraph>
                         </div>
@@ -110,12 +110,12 @@ export default function PricingSlider({ options }: { options: PricingOption[] })
                         <div className="space-y-8">
                             <div>
                                 <div className="flex justify-between mb-2">
-                                    <span className="text-white/70">
-                                        Pages: <span className="text-white font-medium">{pages}</span>
+                                    <span className="text-black/70">
+                                        Pages: <span className="text-black font-medium">{pages}</span>
                                     </span>
-                                    <span className="text-white/70">
+                                    <span className="text-black/70">
                                         Price per page:{" "}
-                                        <span className="text-white font-medium">
+                                        <span className="text-black font-medium">
                                             ₹{options[selectedOption].pricePerPage.toFixed(2)}
                                         </span>
                                     </span>
@@ -128,7 +128,7 @@ export default function PricingSlider({ options }: { options: PricingOption[] })
                                     onValueChange={(value) => setPages(value[0])}
                                     className="py-4"
                                 />
-                                <div className="flex justify-between text-xs text-white/50">
+                                <div className="flex justify-between text-xs text-black/50">
                                     <span>1 page</span>
                                     <span>50 pages</span>
                                     <span>100 pages</span>

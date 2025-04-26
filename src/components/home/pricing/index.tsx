@@ -14,10 +14,10 @@ export default function Pricing() {
             <Container>
                 <div className="flex flex-col items-center gap-2">
                     <Animate delay={300} className="flex flex-col items-center gap-2">
-                        <SubHeading icon={<BadgeIndianRupee className="text-purple-400 h-5 w-5" />}>Pricing</SubHeading>
-                        <Heading color="light" level={2}>Simple, Transparent Pricing</Heading>
+                        <SubHeading color="dark" icon={<BadgeIndianRupee className="text-purple-400 h-5 w-5" />}>Pricing</SubHeading>
+                        <Heading color="dark" level={2}>Simple, Transparent Pricing</Heading>
                     </Animate>
-                    <Paragraph color="light" size="normal" className="max-w-3xl text-center">
+                    <Paragraph color="dark" size="normal" className="max-w-3xl text-center">
                         Whether you&apos;re printing simple documents or producing high-quality marketing materials, we have a plan that fits your needs. Transparent pricing with no hidden fees.
                     </Paragraph>
                 </div>

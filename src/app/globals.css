@@ -40,7 +40,7 @@
 
 
   --text-color: #939DB8;
-  --backgroud-color: #0B0C14;
+  --backgroud-color: oklch(98.5% .002 247.839);
   --primary-color: #6f41d2;
   --studio-50: #f4f4fe;
   --studio-100: #edeafd;

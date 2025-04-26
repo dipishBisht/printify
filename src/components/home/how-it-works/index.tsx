@@ -13,10 +13,10 @@ export default function HowItWorks() {
             <Container>
                 <div className="flex flex-col gap-2 items-center">
                     <Animate delay={300} className="flex flex-col gap-2 items-center">
-                        <SubHeading icon={<Workflow className="w-4 h-4 text-purple-400" />}>Simple Process</SubHeading>
-                        <Heading color="light" level={2}>How Printify Works</Heading>
+                        <SubHeading color="dark" icon={<Workflow className="w-4 h-4 text-purple-400" />}>Simple Process</SubHeading>
+                        <Heading color="dark" level={2}>How Printify Works</Heading>
                     </Animate>
-                    <Paragraph color="light" size="normal">
+                    <Paragraph color="dark" size="normal">
                         Printify makes document printing simple and convenient in just a few easy steps
                     </Paragraph>
                     <div
