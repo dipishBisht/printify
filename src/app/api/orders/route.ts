@@ -1,4 +1,4 @@
-import { connectDB } from '@/lib/mongoose';
+import connectDB from '@/lib/mongoose';
 import Order from '@/models/Order';
 
 export async function POST(req: Request) {
