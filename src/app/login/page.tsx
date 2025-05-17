@@ -58,8 +58,12 @@ const Login: React.FC = () => {
             localStorage.setItem('jwtToken', token);
             localStorage.setItem('user', JSON.stringify(user));
             router.push("/");
-        } catch (err: any) {
-            setFormError(err.message);
+        } catch (err) {
+            if (err instanceof Error) {
+                setFormError(err.message);
+            } else {
+                setFormError("An unexpected error occurred");
+            }
         } finally {
             setLoading(false);
         }
