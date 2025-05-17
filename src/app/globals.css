@@ -141,12 +141,10 @@ body {
   }
 }
 
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Gradient text */
 .text-gradient {
   background-clip: text;
   -webkit-background-clip: text;
