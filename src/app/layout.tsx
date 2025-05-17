@@ -20,14 +20,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${outfit.className} font-sans`}>
-        <Navbar />
-        <main className="min-h-screen flex flex-col">
-          {children}
-        </main>
-        <Footer />
-      </body>
-    </html>
+      <html lang="en">
+        <body className={`${outfit.className} font-sans`}>
+          <Navbar />
+          <main className="min-h-screen flex flex-col">
+            {children}
+          </main>
+          <Footer />
+        </body>
+      </html>
   );
 }
